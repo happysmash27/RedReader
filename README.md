@@ -1,7 +1,7 @@
-RedReader (for Android)
+RedReader for SaidIt (for Android)
 =======================
 
-An unofficial, open source client for reddit.
+A [SaidIt](https://saidit.net) fork of RedReader, an unofficial open source client for reddit.
 
 ![Build Status](https://travis-ci.org/QuantumBadger/RedReader.svg?branch=master)
 [![Translation status](https://hosted.weblate.org/widgets/redreader/-/svg-badge.svg)](https://hosted.weblate.org/engage/redreader/?utm_source=widget)

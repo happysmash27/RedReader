@@ -47,7 +47,7 @@ public final class RedditOAuth {
 			= "identity,edit,flair,history,modconfig,modflair,modlog,modposts,modwiki,mysubreddits,privatemessages,"
 					+ "read,report,save,submit,subscribe,vote,wikiedit,wikiread";
 
-	private static final String ACCESS_TOKEN_URL = "https://www.reddit.com/api/v1/access_token";
+	private static final String ACCESS_TOKEN_URL = "https://saidit.net/api/v1/access_token";
 
 	public static class Token {
 
@@ -145,7 +145,7 @@ public final class RedditOAuth {
 
 	public static Uri getPromptUri() {
 
-		final Uri.Builder uri = Uri.parse("https://www.reddit.com/api/v1/authorize.compact").buildUpon();
+		final Uri.Builder uri = Uri.parse("https://saidit.net/api/v1/authorize.compact").buildUpon();
 
 		uri.appendQueryParameter("response_type", "code");
 		uri.appendQueryParameter("duration", "permanent");
@@ -666,7 +666,7 @@ public final class RedditOAuth {
 		final String uri = ACCESS_TOKEN_URL;
 
 		final ArrayList<HTTPBackend.PostField> postFields = new ArrayList<>(2);
-		postFields.add(new HTTPBackend.PostField("grant_type", "https://oauth.reddit.com/grants/installed_client"));
+		postFields.add(new HTTPBackend.PostField("grant_type", "https://oauth.saidit.net/grants/installed_client"));
 		postFields.add(new HTTPBackend.PostField("device_id", "DO_NOT_TRACK_THIS_DEVICE"));
 
 		try {

@@ -293,8 +293,8 @@ public final class General {
 							final boolean isRedditRequest
 									= uri != null
 											&& uri.getHost() != null
-											&& ("reddit.com".equalsIgnoreCase(uri.getHost())
-													|| uri.getHost().endsWith(".reddit.com"));
+											&& ("saidit.net".equalsIgnoreCase(uri.getHost())
+													|| uri.getHost().endsWith(".saidit.net"));
 
 							if(isRedditRequest) {
 								title = R.string.error_403_title;

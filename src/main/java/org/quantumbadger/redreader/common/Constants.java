@@ -106,8 +106,8 @@ public final class Constants {
 
 		public static final String
 				SCHEME_HTTPS = "https",
-				DOMAIN_HTTPS = "oauth.reddit.com",
-				DOMAIN_HTTPS_HUMAN = "reddit.com",
+				DOMAIN_HTTPS = "oauth.saidit.net",
+				DOMAIN_HTTPS_HUMAN = "saidit.net",
 				PATH_VOTE = "/api/vote",
 				PATH_SAVE = "/api/save",
 				PATH_HIDE = "/api/hide",
@@ -140,7 +140,7 @@ public final class Constants {
 		}
 
 		public static URI getNonAPIUri(final String path) {
-			return General.uriFromString(getScheme() + "://reddit.com" + path);
+			return General.uriFromString(getScheme() + "://saidit.net" + path);
 		}
 
 		public static boolean isApiErrorUser(final String str) {

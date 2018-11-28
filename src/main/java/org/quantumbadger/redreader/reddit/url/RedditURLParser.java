@@ -167,7 +167,7 @@ public class RedditURLParser {
 		}
 
 		public String humanReadableUrl() {
-			return "reddit.com" + humanReadablePath();
+			return "saidit.net" + humanReadablePath();
 		}
 
 		public String humanReadablePath() {

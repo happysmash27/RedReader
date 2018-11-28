@@ -131,7 +131,7 @@ public class LinkHandler {
 		}
 
 		if(url.startsWith("/")) {
-			url = "https://reddit.com" + url;
+			url = "https://saidit.net" + url;
 		}
 
 		if(!url.contains("://")) {

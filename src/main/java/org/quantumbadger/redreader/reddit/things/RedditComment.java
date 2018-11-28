@@ -163,7 +163,7 @@ public final class RedditComment implements Parcelable, RedditThingWithIdAndType
 			}
 
 			if(rawContextUrl.startsWith("/")) {
-				rawContextUrl = "https://reddit.com" + rawContextUrl;
+				rawContextUrl = "https://saidit.net" + rawContextUrl;
 			}
 
 			return PostCommentListingURL.parse(Uri.parse(rawContextUrl));

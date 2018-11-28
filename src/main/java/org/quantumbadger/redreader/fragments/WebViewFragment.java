@@ -244,7 +244,7 @@ public class WebViewFragment extends Fragment implements RedditPostView.PostSele
 		if (mUrl != null) {
 			webView.loadUrl(mUrl);
 		} else {
-			webView.loadDataWithBaseURL("https://reddit.com/", html, "text/html; charset=UTF-8", null, null);
+			webView.loadDataWithBaseURL("https://saidit.net/", html, "text/html; charset=UTF-8", null, null);
 		}
 
 		webView.setWebViewClient(new WebViewClient() {
