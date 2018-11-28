@@ -50,7 +50,7 @@ public class SearchPostListURL extends PostListingURL {
 	public static SearchPostListURL build(String subreddit, String query) {
 		if(subreddit != null) {
 			while(subreddit.startsWith("/")) subreddit = subreddit.substring(1);
-			while(subreddit.startsWith("r/")) subreddit = subreddit.substring(2);
+			while(subreddit.startsWith("s/")) subreddit = subreddit.substring(2);
 		}
 		return new SearchPostListURL(subreddit, query, null, null, null);
 	}
@@ -76,7 +76,7 @@ public class SearchPostListURL extends PostListingURL {
 		builder.scheme(Constants.Reddit.getScheme()).authority(Constants.Reddit.getDomain());
 
 		if(subreddit != null) {
-			builder.encodedPath("/r/");
+			builder.encodedPath("/s/");
 			builder.appendPath(subreddit);
 			builder.appendQueryParameter("restrict_sr", "on");
 		} else {
@@ -185,7 +185,7 @@ public class SearchPostListURL extends PostListingURL {
 
 			case 3: {
 
-				if(!pathSegments[0].equals("r")) return null;
+				if(!pathSegments[0].equals("s")) return null;
 
 				final String subreddit = pathSegments[1];
 				return new SearchPostListURL(restrict_sr ? subreddit : null, query, order, limit, before, after);
@@ -209,7 +209,7 @@ public class SearchPostListURL extends PostListingURL {
 		}
 
 		if(subreddit != null) {
-			builder.append(" on /r/").append(subreddit);
+			builder.append(" on /s/").append(subreddit);
 		}
 
 		return builder.toString();

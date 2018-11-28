@@ -510,7 +510,7 @@ public class MainMenuListingManager {
 				try {
 					final String canonicalName = RedditSubreddit.getCanonicalName(name);
 
-					if(canonicalName.startsWith("/r/")) {
+					if(canonicalName.startsWith("/s/")) {
 						mListener.onSelected((PostListingURL) SubredditPostListURL.getSubreddit(canonicalName));
 
 					} else {

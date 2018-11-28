@@ -126,7 +126,7 @@ public class LinkHandler {
 			}
 		}
 
-		if(url.startsWith("r/") || url.startsWith("u/")) {
+		if(url.startsWith("s/") || url.startsWith("u/")) {
 			url = "/" + url;
 		}
 

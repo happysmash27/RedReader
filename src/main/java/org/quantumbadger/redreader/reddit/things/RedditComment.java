@@ -158,7 +158,7 @@ public final class RedditComment implements Parcelable, RedditThingWithIdAndType
 
 			String rawContextUrl = context;
 
-			if(rawContextUrl.startsWith("r/")) {
+			if(rawContextUrl.startsWith("s/")) {
 				rawContextUrl = "/" + rawContextUrl;
 			}
 

@@ -86,7 +86,7 @@ public class PostSubmitActivity extends BaseActivity {
 
 				final String subreddit = intent.getStringExtra("subreddit");
 
-				if(subreddit != null && subreddit.length() > 0 && !subreddit.matches("/?(r/)?all/?") && subreddit.matches("/?(r/)?\\w+/?")) {
+				if(subreddit != null && subreddit.length() > 0 && !subreddit.matches("/?(s/)?all/?") && subreddit.matches("/?(s/)?\\w+/?")) {
 					subredditEdit.setText(subreddit);
 				}
 
@@ -281,7 +281,7 @@ public class PostSubmitActivity extends BaseActivity {
 				final RedditAccount selectedAccount = RedditAccountManager.getInstance(this).getAccount((String)usernameSpinner.getSelectedItem());
 
 				while(subreddit.startsWith("/")) subreddit = subreddit.substring(1);
-				while(subreddit.startsWith("r/")) subreddit = subreddit.substring(2);
+				while(subreddit.startsWith("s/")) subreddit = subreddit.substring(2);
 				while(subreddit.endsWith("/")) subreddit = subreddit.substring(0, subreddit.length() - 1);
 
 				final boolean sendRepliesToInbox = sendRepliesToInboxCheckbox.isChecked();

@@ -52,7 +52,7 @@ public class SubredditPostListURL extends PostListingURL {
 		Uri.Builder builder = new Uri.Builder();
 		builder.scheme(Constants.Reddit.getScheme()).authority(Constants.Reddit.getDomain());
 
-		builder.encodedPath("/r/");
+		builder.encodedPath("/s/");
 		builder.appendPath(RedditSubreddit.stripRPrefix(subreddit));
 
 		return RedditURLParser.parse(builder.build());
@@ -114,19 +114,19 @@ public class SubredditPostListURL extends PostListingURL {
 				break;
 
 			case ALL:
-				builder.encodedPath("/r/all");
+				builder.encodedPath("/s/all");
 				break;
 
 			case SUBREDDIT:
 			case SUBREDDIT_COMBINATION:
 			case ALL_SUBTRACTION:
 			case RANDOM:
-				builder.encodedPath("/r/");
+				builder.encodedPath("/s/");
 				builder.appendPath(subreddit);
 				break;
 
 			case POPULAR:
-				builder.encodedPath("/r/popular");
+				builder.encodedPath("/s/random"); // TODO
 				break;
 		}
 
@@ -218,7 +218,7 @@ public class SubredditPostListURL extends PostListingURL {
 			case 2:
 			case 3: {
 
-				if(!pathSegments[0].equals("r")) return null;
+				if(!pathSegments[0].equals("s")) return null;
 
 				final String subreddit = General.asciiLowercase(pathSegments[1]);
 

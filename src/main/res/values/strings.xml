@@ -18,7 +18,7 @@
 
 <resources>
 
-    <string name="app_name" translatable="false">RedReader</string>
+    <string name="app_name" translatable="false">SaidIt RedReader</string>
 
     <!-- First Run Dialog -->
 
@@ -220,11 +220,11 @@
 
     <string name="action_menu_post_title">Post Actions</string>
 
-    <string name="action_upvote">Upvote</string>
-    <string name="action_downvote">Downvote</string>
+    <string name="action_upvote">Insightful</string>
+    <string name="action_downvote">Funny</string>
     <string name="action_vote_remove">Remove Vote</string>
-    <string name="action_upvote_remove">Remove Upvote</string>
-    <string name="action_downvote_remove">Remove Downvote</string>
+    <string name="action_upvote_remove">Remove Insightful</string>
+    <string name="action_downvote_remove">Remove Funny</string>
     <string name="action_save">Save</string>
     <string name="action_hide">Hide</string>
     <string name="action_unsave">Unsave</string>
@@ -744,8 +744,8 @@
     <string name="block_subreddit">Block Subreddit</string>
     <string name="unblock_subreddit">Unblock Subreddit</string>
     <string name="pref_blocked_subreddits_key" translatable="false">pref_blocked_subreddits</string>
-    <string name="block_done">Subreddit blocked. Future visits to /r/all will exclude this subreddit.</string>
-    <string name="unblock_done">Subreddit unblocked. Future visits to /r/all will include this subreddit.</string>
+    <string name="block_done">Subreddit blocked. Future visits to /s/all will exclude this subreddit.</string>
+    <string name="unblock_done">Subreddit unblocked. Future visits to /s/all will include this subreddit.</string>
 
     <!-- 2016-03-14-->
     <string name="pref_behaviour_comment_min_key" translatable="false">pref_behaviour_comment_min</string>
@@ -1015,7 +1015,7 @@
 	<string name="lang_in" translatable="false">Bahasa Indonesia</string>
 
 	<string name="pref_menus_show_popular_main_menu_key" translatable="false">pref_menus_show_popular_main_menu</string>
-	<string name="pref_menus_show_popular_main_menu_title">Show /r/popular in main menu</string>
+	<string name="pref_menus_show_popular_main_menu_title">Show /s/popular in main menu</string>
 	<string name="pref_behaviour_video_playback_controls_key" translatable="false">pref_behaviour_video_playback_controls</string>
 	<string name="pref_behaviour_video_playback_controls_title">Enable video playback controls</string>
 
@@ -1032,7 +1032,7 @@
 	<!-- 2017-12-03 -->
 	<string name="mainmenu_random">Random Subreddit</string>
 	<string name="pref_menus_show_random_main_menu_key" translatable="false">pref_menus_show_random_main_menu</string>
-	<string name="pref_menus_show_random_main_menu_title">Show /r/random in main menu</string>
+	<string name="pref_menus_show_random_main_menu_title">Show /s/random in main menu</string>
 
 	<!-- 2018-01-16 -->
 	<string name="lang_fi" translatable="false">Suomi</string>

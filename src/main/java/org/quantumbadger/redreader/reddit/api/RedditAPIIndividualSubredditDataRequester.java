@@ -56,7 +56,7 @@ public class RedditAPIIndividualSubredditDataRequester implements CacheDataSourc
 							   final RequestResponseHandler<RedditSubreddit, SubredditRequestFailure> handler) {
 
 		final CacheRequest aboutSubredditCacheRequest = new CacheRequest(
-				Constants.Reddit.getUri("/r/" + subredditCanonicalName + "/about.json"),
+				Constants.Reddit.getUri("/s/" + subredditCanonicalName + "/about.json"),
 				user,
 				null,
 				Constants.Priority.API_SUBREDDIT_INVIDIVUAL,

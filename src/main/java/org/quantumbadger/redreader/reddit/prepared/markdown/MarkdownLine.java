@@ -155,7 +155,7 @@ public final class MarkdownLine {
 
 				case '/':
 
-					if(src.equalAt(i + 1, "u/") || src.equalAt(i + 1, "r/")) {
+					if(src.equalAt(i + 1, "u/") || src.equalAt(i + 1, "s/")) {
 						return false;
 					}
 
@@ -177,7 +177,7 @@ public final class MarkdownLine {
 
 					break;
 
-				case 'r':
+				case 's':
 				case 'u':
 
 					if(src.length > i + 1 && src.arr[src.start + i + 1] == '/') {

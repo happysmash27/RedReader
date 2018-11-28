@@ -171,7 +171,7 @@ public class PostCommentListingURL extends CommentListingURL {
 
 		int offset = 0;
 
-		if(pathSegments[0].equalsIgnoreCase("r")) {
+		if(pathSegments[0].equalsIgnoreCase("s")) {
 			offset = 2;
 
 			if(pathSegments.length - offset < 2) {

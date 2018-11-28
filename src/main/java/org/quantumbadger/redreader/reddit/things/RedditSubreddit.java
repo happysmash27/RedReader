@@ -59,7 +59,7 @@ public class RedditSubreddit implements Parcelable, Comparable<RedditSubreddit>,
 
 	@WritableObjectTimestamp public long downloadTime;
 
-	private static final Pattern NAME_PATTERN = Pattern.compile("(/)?(r/)?([\\w\\+\\-\\.:]+)/?");
+	private static final Pattern NAME_PATTERN = Pattern.compile("(/)?(s/)?([\\w\\+\\-\\.:]+)/?");
 	private static final Pattern USER_PATTERN = Pattern.compile("(/)?(u/|user/)([\\w\\+\\-\\.:]+)/?");
 
 	public RedditSubreddit(CreationData creationData) {
@@ -98,7 +98,7 @@ public class RedditSubreddit implements Parcelable, Comparable<RedditSubreddit>,
 			return "/user/" + General.asciiLowercase(userSr);
 		}
 
-		return "/r/" + General.asciiLowercase(stripRPrefix(name));
+		return "/s/" + General.asciiLowercase(stripRPrefix(name));
 	}
 
 	public String getCanonicalName() throws InvalidSubredditNameException {
