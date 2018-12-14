@@ -37,9 +37,10 @@ public final class RedditThing {
 		kinds = new HashMap<>();
 		kinds.put("t1", Kind.COMMENT);
 		kinds.put("t2", Kind.USER);
-		kinds.put("t3", Kind.POST);
-		kinds.put("t4", Kind.MESSAGE);
-		kinds.put("t5", Kind.SUBREDDIT);
+		// SaidIt.net
+		kinds.put("t5", Kind.POST);
+		kinds.put("t6", Kind.MESSAGE);
+		kinds.put("t4", Kind.SUBREDDIT);
 		kinds.put("more", Kind.MORE_COMMENTS);
 		kinds.put("Listing", Kind.LISTING);
 	}

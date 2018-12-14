@@ -76,9 +76,9 @@ public final class Constants {
 				PATH_REPORT = "/api/report",
 				PATH_DELETE = "/api/del",
 				PATH_SUBSCRIBE = "/api/subscribe",
-				PATH_SUBREDDITS_MINE_SUBSCRIBER = "/subreddits/mine/subscriber.json?limit=100",
-				PATH_SUBREDDITS_MINE_MODERATOR = "/subreddits/mine/moderator.json?limit=100",
-				PATH_SUBREDDITS_POPULAR = "/subreddits/popular.json",
+				PATH_SUBREDDITS_MINE_SUBSCRIBER = "/subs/mine/subscriber.json?limit=100",
+				PATH_SUBREDDITS_MINE_MODERATOR = "/subs/mine/moderator.json?limit=100",
+				PATH_SUBREDDITS_POPULAR = "/subs/popular.json",
 				PATH_MULTIREDDITS_MINE = "/api/multi/mine.json",
 				PATH_COMMENTS = "/comments/",
 				PATH_ME = "/api/v1/me";

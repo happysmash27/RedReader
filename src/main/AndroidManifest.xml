@@ -68,7 +68,7 @@
                 <category android:name="android.intent.category.BROWSABLE" />
                 <data android:scheme="http" android:host="*.saidit.net" />
                 <data android:scheme="http" android:host="saidit.net" />
-                <data android:scheme="http" android:host="redd.it" />
+                <!-- <data android:scheme="http" android:host="redd.it" /> -->
                 <data android:scheme="https" android:host="*.saidit.net" />
                 <data android:scheme="https" android:host="saidit.net" />
                 <!-- <data android:scheme="https" android:host="redd.it" /> -->

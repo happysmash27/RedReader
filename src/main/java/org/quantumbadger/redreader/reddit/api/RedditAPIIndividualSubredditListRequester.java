@@ -71,7 +71,7 @@ public class RedditAPIIndividualSubredditListRequester
 				data.add(General.asciiLowercase(name));
 			}
 
-			data.add("/s/redreader");
+			// data.add("/r/redreader");
 
 			final WritableHashSet result = new WritableHashSet(data, now, "DEFAULTS");
 			handler.onRequestSuccess(result, now);
