@@ -338,6 +338,10 @@ public class MainActivity extends RefreshableActivity
 				LinkHandler.onLinkClicked(this, new UserProfileURL(username).toString());
 				break;
 
+			case MainMenuFragment.MENU_MENU_ACTION_SUBSCRIBED:
+				onSelected(SubredditPostListURL.getSubscribed());
+				break;
+
 			case MainMenuFragment.MENU_MENU_ACTION_CUSTOM: {
 
 				final AlertDialog.Builder alertBuilder = new AlertDialog.Builder(this);

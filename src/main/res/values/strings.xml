@@ -161,6 +161,7 @@
     <string name="mainmenu_inbox">Inbox</string>
     <string name="mainmenu_profile">My Profile</string>
     <string name="mainmenu_header_subreddits">Subs</string>
+    <string name="mainmenu_subscribed">Subscribed</string>
 
     <!-- General Listing -->
 

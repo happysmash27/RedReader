@@ -271,6 +271,7 @@ public class PostListingFragment extends RRFragment
 					case SUBREDDIT_COMBINATION:
 					case ALL_SUBTRACTION:
 					case POPULAR:
+					case SUBSCRIBED:
 						setHeader(mPostListingURL.humanReadableName(getActivity(), true), mPostListingURL.humanReadableUrl());
 						CacheManager.getInstance(context).makeRequest(mRequest);
 						break;

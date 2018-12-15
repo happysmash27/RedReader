@@ -47,6 +47,10 @@ public class SubredditPostListURL extends PostListingURL {
 		return new SubredditPostListURL(Type.ALL, null, null, null, null, null);
 	}
 
+	public static SubredditPostListURL getSubscribed() {
+		return new SubredditPostListURL(Type.SUBSCRIBED, null, null, null, null, null);
+	}
+
 	public static RedditURLParser.RedditURL getSubreddit(String subreddit) throws RedditSubreddit.InvalidSubredditNameException {
 
 		Uri.Builder builder = new Uri.Builder();
@@ -59,7 +63,7 @@ public class SubredditPostListURL extends PostListingURL {
 	}
 
 	public enum Type {
-		FRONTPAGE, ALL, SUBREDDIT, SUBREDDIT_COMBINATION, ALL_SUBTRACTION, POPULAR, RANDOM
+		FRONTPAGE, ALL, SUBREDDIT, SUBREDDIT_COMBINATION, ALL_SUBTRACTION, POPULAR, RANDOM, SUBSCRIBED
 	}
 
 	public final Type type;
@@ -127,6 +131,10 @@ public class SubredditPostListURL extends PostListingURL {
 
 			case POPULAR:
 				builder.encodedPath("/s/popular");
+				break;
+
+			case SUBSCRIBED:
+				builder.encodedPath("/s/subscribed");
 				break;
 		}
 
@@ -234,6 +242,10 @@ public class SubredditPostListURL extends PostListingURL {
 						return null;
 					}
 
+				} else if(subreddit.equals("subscribed")) {
+
+					return new SubredditPostListURL(Type.SUBSCRIBED, null, order, limit, before, after);
+
 				} else if(subreddit.equals("popular")) {
 
 					return new SubredditPostListURL(Type.POPULAR, null, order, limit, before, after);
@@ -338,6 +350,9 @@ public class SubredditPostListURL extends PostListingURL {
 			case SUBREDDIT_COMBINATION:
 			case ALL_SUBTRACTION:
 				return subreddit;
+
+			case SUBSCRIBED:
+				return context.getString(R.string.mainmenu_subscribed);
 
 			default:
 				return super.humanReadableName(context, shorter);
