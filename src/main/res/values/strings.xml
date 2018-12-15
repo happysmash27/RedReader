@@ -868,7 +868,7 @@
 	<string name="pref_behaviour_postsort">Default Post Sort</string>
 
 	<!-- 2016-08-06 -->
-	<string name="mainmenu_custom_destination">Custom Location</string>
+	<string name="mainmenu_custom_destination">Choose Sub…</string>
 	<string name="mainmenu_custom_destination_subreddit">Sub</string>
 	<string name="mainmenu_custom_destination_user">User</string>
 	<string name="mainmenu_custom_destination_url">URL</string>
