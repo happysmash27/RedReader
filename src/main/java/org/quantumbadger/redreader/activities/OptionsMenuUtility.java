@@ -493,8 +493,8 @@ public final class OptionsMenuUtility {
 
 		addSort(activity, sortPosts, R.string.sort_posts_hot, PostSort.HOT);
 		addSort(activity, sortPosts, R.string.sort_posts_new, PostSort.NEW);
-		if(includeRising)
-			addSort(activity, sortPosts, R.string.sort_posts_rising, PostSort.RISING);
+		// if(includeRising)
+		// 	addSort(activity, sortPosts, R.string.sort_posts_rising, PostSort.RISING);
 		addSort(activity, sortPosts, R.string.sort_posts_controversial, PostSort.CONTROVERSIAL);
 
 		final SubMenu sortPostsTop = sortPosts.addSubMenu(R.string.sort_posts_top);

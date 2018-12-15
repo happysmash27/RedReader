@@ -99,7 +99,7 @@
 	<string-array name="pref_behaviour_postsort_array">
 		<item>@string/sort_posts_hot</item>
 		<item>@string/sort_posts_new</item>
-		<item>@string/sort_posts_rising</item>
+		<!-- <item>@string/sort_posts_rising</item> -->
 		<item>@string/sort_posts_controversial</item>
 		<item>@string/sort_posts_top_hour</item>
 		<item>@string/sort_posts_top_today</item>
@@ -113,7 +113,7 @@
 	<string-array name="pref_behaviour_postsort_array_return">
 		<item>hot</item>
 		<item>new</item>
-		<item>rising</item>
+		<!-- <item>rising</item> -->
 		<item>controversial</item>
 		<item>top_hour</item>
 		<item>top_day</item>
