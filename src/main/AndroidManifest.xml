@@ -33,7 +33,7 @@
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
 
-    <application android:name="org.quantumbadger.redreader.RedReader"
+    <application android:name="org.quantumbadger.redreader.SaidItRedReader"
                  android:icon="@drawable/icon"
                  android:label="@string/app_name"
                  android:theme="@style/RR.Startup"
