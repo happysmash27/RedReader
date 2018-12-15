@@ -126,7 +126,7 @@ public class SubredditPostListURL extends PostListingURL {
 				break;
 
 			case POPULAR:
-				builder.encodedPath("/s/random"); // TODO
+				builder.encodedPath("/s/popular");
 				break;
 		}
 

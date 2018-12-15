@@ -34,7 +34,7 @@ public class RedditSubreddit implements Parcelable, Comparable<RedditSubreddit>,
 		try {
 			return getCanonicalName();
 		} catch(InvalidSubredditNameException e) {
-			throw new UnexpectedInternalStateException(String.format(Locale.US, "Cannot save subreddit '%s'", url));
+			throw new UnexpectedInternalStateException(String.format(Locale.US, "Cannot save sub '%s'", url));
 		}
 	}
 
@@ -46,7 +46,7 @@ public class RedditSubreddit implements Parcelable, Comparable<RedditSubreddit>,
 
 	public static final class InvalidSubredditNameException extends Exception {
 		public InvalidSubredditNameException(String subredditName) {
-			super(String.format(Locale.US, "Invalid subreddit name '%s'.", subredditName == null ? "NULL" : subredditName));
+			super(String.format(Locale.US, "Invalid sub name '%s'.", subredditName == null ? "NULL" : subredditName));
 		}
 	}
 

@@ -64,6 +64,14 @@ Detailed instructions on building RedReader using IntelliJ IDEA are in
 [BUILD.md](BUILD.md).
 
 
+SaidIt/Reddit Configuration
+----------------------------
+
+* Create a new saidit/reddit user account for the app, employees cannot own the app
+* Create an 'installed app' which is read only with no secret key for anonymous users
+* Set the app's `redirect url` to `http://rr_oauth_redir`
+* Set RedReader's `CLIENT_ID` to the saidit/reddit app id
+
 License
 -------
 

@@ -17,7 +17,7 @@
   -->
 <resources>
 
-    <string name="app_name" translatable="false">RedReader</string>
+    <string name="app_name" translatable="false">SaidIt</string>
 
     <!-- First Run Dialog -->
 
