@@ -191,7 +191,7 @@
     <string name="sort_posts_hot">Hot</string>
     <string name="sort_posts_new">New</string>
     <string name="sort_posts_rising">Rising</string>
-    <string name="sort_posts_controversial">Controversial</string>
+    <string name="sort_posts_controversial">Funny</string>
     <string name="sort_posts_top">Top</string>
     <string name="sort_posts_top_hour">Top: This Hour</string>
     <string name="sort_posts_top_today">Top: Today</string>
@@ -206,7 +206,7 @@
     <string name="sort_comments_hot">Hot</string>
     <string name="sort_comments_new">New</string>
     <string name="sort_comments_old">Old</string>
-    <string name="sort_comments_controversial">Controversial</string>
+    <string name="sort_comments_controversial">Funny</string>
     <string name="sort_comments_top">Top</string>
 
     <!-- Dialog Buttons -->

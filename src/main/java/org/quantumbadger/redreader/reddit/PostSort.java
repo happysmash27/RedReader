@@ -53,7 +53,7 @@ public enum PostSort {
 		} else if(sort.equals("new")) {
 			return NEW;
 
-		} else if(sort.equals("controversial")) {
+		} else if(sort.equals("controversial") || sort.equals("funny")) {
 			return CONTROVERSIAL;
 
 		} else if(sort.equals("rising")) {
@@ -80,10 +80,11 @@ public enum PostSort {
 		switch(this) {
 			case HOT:
 			case NEW:
-			case CONTROVERSIAL:
 				builder.appendQueryParameter("sort", General.asciiLowercase(name()));
 				break;
-
+			case CONTROVERSIAL:
+				builder.appendQueryParameter("sort", "funny");
+				break;
 			case TOP_HOUR:
 			case TOP_DAY:
 			case TOP_WEEK:
@@ -103,10 +104,11 @@ public enum PostSort {
 			case HOT:
 			case NEW:
 			case RISING:
-			case CONTROVERSIAL:
 				builder.appendEncodedPath(General.asciiLowercase(name()));
 				break;
-
+			case CONTROVERSIAL:
+				builder.appendEncodedPath("funny");
+				break;
 			case TOP_HOUR:
 			case TOP_DAY:
 			case TOP_WEEK:

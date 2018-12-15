@@ -182,7 +182,7 @@ public class UserCommentListingURL extends CommentListingURL {
 			} else if(sort.equals("new")) {
 				return NEW;
 
-			} else if(sort.equals("controversial")) {
+			} else if(sort.equals("controversial") || sort.equals("funny")) {
 				return CONTROVERSIAL;
 
 			} else if(sort.equals("top")) {
