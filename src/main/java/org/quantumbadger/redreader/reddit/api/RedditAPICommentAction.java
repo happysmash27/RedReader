@@ -56,8 +56,10 @@ public class RedditAPICommentAction {
 
 	public enum RedditCommentAction {
 		UPVOTE,
-		UNVOTE,
+		// UNVOTE,
 		DOWNVOTE,
+		UNUPVOTE,
+		UNDOWNVOTE,
 		SAVE,
 		UNSAVE,
 		REPORT,
@@ -105,13 +107,13 @@ public class RedditAPICommentAction {
 				if (!changeDataManager.isUpvoted(comment)) {
 					menu.add(new RCVMenuItem(activity, R.string.action_upvote, RedditCommentAction.UPVOTE));
 				} else {
-					menu.add(new RCVMenuItem(activity, R.string.action_upvote_remove, RedditCommentAction.UNVOTE));
+					menu.add(new RCVMenuItem(activity, R.string.action_upvote_remove, RedditCommentAction.UNUPVOTE));
 				}
 
 				if (!changeDataManager.isDownvoted(comment)) {
 					menu.add(new RCVMenuItem(activity, R.string.action_downvote, RedditCommentAction.DOWNVOTE));
 				} else {
-					menu.add(new RCVMenuItem(activity, R.string.action_downvote_remove, RedditCommentAction.UNVOTE));
+					menu.add(new RCVMenuItem(activity, R.string.action_downvote_remove, RedditCommentAction.UNDOWNVOTE));
 				}
 			}
 
@@ -194,8 +196,16 @@ public class RedditAPICommentAction {
 				action(activity, comment, RedditAPI.ACTION_DOWNVOTE, changeDataManager);
 				break;
 
-			case UNVOTE:
-				action(activity, comment, RedditAPI.ACTION_UNVOTE, changeDataManager);
+			// case UNVOTE:
+			// 	action(activity, comment, RedditAPI.ACTION_UNVOTE, changeDataManager);
+			// 	break;
+
+			case UNUPVOTE:
+				action(activity, comment, RedditAPI.ACTION_UNUPVOTE, changeDataManager);
+				break;
+
+			case UNDOWNVOTE:
+				action(activity, comment, RedditAPI.ACTION_UNDOWNVOTE, changeDataManager);
 				break;
 
 			case SAVE:
@@ -374,7 +384,9 @@ public class RedditAPICommentAction {
 		}
 
 		final boolean wasUpvoted = changeDataManager.isUpvoted(comment);
-		final boolean wasDownvoted = changeDataManager.isUpvoted(comment);
+		// SAIDIT - REDREADER CORE BUG???
+		// final boolean wasDownvoted = changeDataManager.isUpvoted(comment);
+		final boolean wasDownvoted = changeDataManager.isDownvoted(comment);
 
 		switch(action) {
 			case RedditAPI.ACTION_DOWNVOTE:
@@ -382,14 +394,24 @@ public class RedditAPICommentAction {
 					changeDataManager.markDownvoted(RRTime.utcCurrentTimeMillis(), comment);
 				}
 				break;
-			case RedditAPI.ACTION_UNVOTE:
-				if(!comment.isArchived()) {
-					changeDataManager.markUnvoted(RRTime.utcCurrentTimeMillis(), comment);
-				}
-				break;
+			// case RedditAPI.ACTION_UNVOTE:
+			// 	if(!comment.isArchived()) {
+			// 		changeDataManager.markUnvoted(RRTime.utcCurrentTimeMillis(), comment);
+			// 	}
+			// 	break;
 			case RedditAPI.ACTION_UPVOTE:
 				if(!comment.isArchived()) {
 					changeDataManager.markUpvoted(RRTime.utcCurrentTimeMillis(), comment);
+				}
+				break;
+			case RedditAPI.ACTION_UNUPVOTE:
+				if(!comment.isArchived()) {
+					changeDataManager.markUnUpvoted(RRTime.utcCurrentTimeMillis(), comment);
+				}
+				break;
+			case RedditAPI.ACTION_UNDOWNVOTE:
+				if(!comment.isArchived()) {
+					changeDataManager.markUnDownvoted(RRTime.utcCurrentTimeMillis(), comment);
 				}
 				break;
 			case RedditAPI.ACTION_SAVE: changeDataManager.markSaved(RRTime.utcCurrentTimeMillis(), comment, true); break;
@@ -398,7 +420,9 @@ public class RedditAPICommentAction {
 
 		boolean vote = (action == RedditAPI.ACTION_DOWNVOTE
 				| action == RedditAPI.ACTION_UPVOTE
-				| action == RedditAPI.ACTION_UNVOTE);
+				// | action == RedditAPI.ACTION_UNVOTE
+				| action == RedditAPI.ACTION_UNUPVOTE
+				| action == RedditAPI.ACTION_UNDOWNVOTE);
 
 		if(comment.isArchived() && vote){
 			Toast.makeText(activity, R.string.error_archived_vote, Toast.LENGTH_SHORT)
@@ -450,16 +474,31 @@ public class RedditAPICommentAction {
 					private void revertOnFailure() {
 
 						switch(action) {
+							// case RedditAPI.ACTION_DOWNVOTE:
+							// case RedditAPI.ACTION_UNVOTE:
+							// case RedditAPI.ACTION_UPVOTE:
+							// 	if(wasUpvoted) {
+							// 		changeDataManager.markUpvoted(RRTime.utcCurrentTimeMillis(), comment);
+							// 	} else if(wasDownvoted) {
+							// 		changeDataManager.markDownvoted(RRTime.utcCurrentTimeMillis(), comment);
+							// 	} else {
+							// 		changeDataManager.markUnvoted(RRTime.utcCurrentTimeMillis(), comment);
+							// 	}
 							case RedditAPI.ACTION_DOWNVOTE:
-							case RedditAPI.ACTION_UNVOTE:
-							case RedditAPI.ACTION_UPVOTE:
-								if(wasUpvoted) {
-									changeDataManager.markUpvoted(RRTime.utcCurrentTimeMillis(), comment);
-								} else if(wasDownvoted) {
+								if (wasDownvoted) {
 									changeDataManager.markDownvoted(RRTime.utcCurrentTimeMillis(), comment);
-								} else {
-									changeDataManager.markUnvoted(RRTime.utcCurrentTimeMillis(), comment);
 								}
+							case RedditAPI.ACTION_UPVOTE:
+								if (wasUpvoted) {
+									changeDataManager.markUpvoted(RRTime.utcCurrentTimeMillis(), comment);
+								}
+								break;
+							case RedditAPI.ACTION_UNUPVOTE:
+								changeDataManager.markUnUpvoted(RRTime.utcCurrentTimeMillis(), comment);
+								break;
+							case RedditAPI.ACTION_UNDOWNVOTE:
+								changeDataManager.markUnDownvoted(RRTime.utcCurrentTimeMillis(), comment);
+								break;
 							case RedditAPI.ACTION_SAVE:
 								changeDataManager.markSaved(RRTime.utcCurrentTimeMillis(), comment, false);
 								break;

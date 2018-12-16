@@ -118,9 +118,12 @@ public class RedditCommentView extends FlingableItemView implements RedditChange
 
 			case UPVOTE:
 				if(mChangeDataManager.isUpvoted(comment)) {
+					// return new ActionDescriptionPair(
+					// 		RedditAPICommentAction.RedditCommentAction.UNVOTE,
+					// 		R.string.action_vote_remove);
 					return new ActionDescriptionPair(
-							RedditAPICommentAction.RedditCommentAction.UNVOTE,
-							R.string.action_vote_remove);
+							RedditAPICommentAction.RedditCommentAction.UNUPVOTE,
+							R.string.action_upvote_remove);
 				} else {
 					return new ActionDescriptionPair(
 							RedditAPICommentAction.RedditCommentAction.UPVOTE,
@@ -129,9 +132,12 @@ public class RedditCommentView extends FlingableItemView implements RedditChange
 
 			case DOWNVOTE:
 				if(mChangeDataManager.isDownvoted(comment)) {
+					// return new ActionDescriptionPair(
+					// 		RedditAPICommentAction.RedditCommentAction.UNVOTE,
+					// 		R.string.action_vote_remove);
 					return new ActionDescriptionPair(
-							RedditAPICommentAction.RedditCommentAction.UNVOTE,
-							R.string.action_vote_remove);
+							RedditAPICommentAction.RedditCommentAction.UNDOWNVOTE,
+							R.string.action_downvote_remove);
 				} else {
 					return new ActionDescriptionPair(
 							RedditAPICommentAction.RedditCommentAction.DOWNVOTE,
