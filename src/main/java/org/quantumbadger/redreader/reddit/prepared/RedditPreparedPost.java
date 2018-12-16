@@ -89,7 +89,7 @@ public final class RedditPreparedPost {
 
 	public enum Action {
 		UPVOTE(R.string.action_upvote),
-		UNVOTE(R.string.action_vote_remove),
+		// UNVOTE(R.string.action_vote_remove),
 		DOWNVOTE(R.string.action_downvote),
 		SAVE(R.string.action_save),
 		HIDE(R.string.action_hide),
@@ -120,7 +120,9 @@ public final class RedditPreparedPost {
 		PIN(R.string.action_pin_subreddit),
 		UNPIN(R.string.action_unpin_subreddit),
 		SUBSCRIBE(R.string.action_subscribe_subreddit),
-		UNSUBSCRIBE(R.string.action_unsubscribe_subreddit);
+		UNSUBSCRIBE(R.string.action_unsubscribe_subreddit),
+		UNUPVOTE(R.string.action_upvote_remove),
+		UNDOWNVOTE(R.string.action_downvote_remove);
 
 		public final int descriptionResId;
 
@@ -183,7 +185,7 @@ public final class RedditPreparedPost {
 				if(!post.isUpvoted()) {
 					menu.add(new RPVMenuItem(activity, R.string.action_upvote, Action.UPVOTE));
 				} else {
-					menu.add(new RPVMenuItem(activity, R.string.action_upvote_remove, Action.UNVOTE));
+					menu.add(new RPVMenuItem(activity, R.string.action_upvote_remove, Action.UNUPVOTE));
 				}
 			}
 
@@ -191,7 +193,7 @@ public final class RedditPreparedPost {
 				if(!post.isDownvoted()) {
 					menu.add(new RPVMenuItem(activity, R.string.action_downvote, Action.DOWNVOTE));
 				} else {
-					menu.add(new RPVMenuItem(activity, R.string.action_downvote_remove, Action.UNVOTE));
+					menu.add(new RPVMenuItem(activity, R.string.action_downvote_remove, Action.UNDOWNVOTE));
 				}
 			}
 
@@ -314,8 +316,16 @@ public final class RedditPreparedPost {
 				post.action(activity, RedditAPI.ACTION_DOWNVOTE);
 				break;
 
-			case UNVOTE:
-				post.action(activity, RedditAPI.ACTION_UNVOTE);
+			// case UNVOTE:
+			// 	post.action(activity, RedditAPI.ACTION_UNVOTE);
+			// 	break;
+
+			case UNUPVOTE:
+				post.action(activity, RedditAPI.ACTION_UNUPVOTE);
+				break;
+
+			case UNDOWNVOTE:
+				post.action(activity, RedditAPI.ACTION_UNDOWNVOTE);
 				break;
 
 			case SAVE:
@@ -644,10 +654,17 @@ public final class RedditPreparedPost {
 
 		int score = src.getScoreExcludingOwnVote();
 
+		// if(isUpvoted()) {
+		// 	score++;
+		// } else if(isDownvoted()) {
+		// 	score--;
+		// }
+
 		if(isUpvoted()) {
+			score = score + 2;
+		}
+		if(isDownvoted()) {
 			score++;
-		} else if(isDownvoted()) {
-			score--;
 		}
 
 		return score;
@@ -873,6 +890,7 @@ public final class RedditPreparedPost {
 			return;
 		}
 
+		// SAIDIT - Warning inaccurate
 		final int lastVoteDirection = getVoteDirection();
 		final boolean archived = src.isArchived();
 
@@ -885,14 +903,26 @@ public final class RedditPreparedPost {
 					mChangeDataManager.markDownvoted(now, src);
 				}
 				break;
-			case RedditAPI.ACTION_UNVOTE:
-				if(!archived) {
-					mChangeDataManager.markUnvoted(now, src);
-				}
-				break;
+			// case RedditAPI.ACTION_UNVOTE:
+			// 	if(!archived) {
+			// 		mChangeDataManager.markUnvoted(now, src);
+			// 	}
+			// 	break;
 			case RedditAPI.ACTION_UPVOTE:
 				if(!archived) {
 					mChangeDataManager.markUpvoted(now, src);
+				}
+				break;
+
+			case RedditAPI.ACTION_UNUPVOTE:
+				if(!archived) {
+					mChangeDataManager.markUnUpvoted(now, src);
+				}
+				break;
+
+			case RedditAPI.ACTION_UNDOWNVOTE:
+				if(!archived) {
+					mChangeDataManager.markUnDownvoted(now, src);
 				}
 				break;
 
@@ -923,7 +953,9 @@ public final class RedditPreparedPost {
 
 		boolean vote = (action == RedditAPI.ACTION_DOWNVOTE
 				| action == RedditAPI.ACTION_UPVOTE
-				| action == RedditAPI.ACTION_UNVOTE);
+				// | action == RedditAPI.ACTION_UNVOTE);
+				| action == RedditAPI.ACTION_UNUPVOTE
+				| action == RedditAPI.ACTION_UNDOWNVOTE);
 
 		if(archived && vote){
 			Toast.makeText(activity, R.string.error_archived_vote, Toast.LENGTH_SHORT)
@@ -976,12 +1008,20 @@ public final class RedditPreparedPost {
 								mChangeDataManager.markDownvoted(now, src);
 								break;
 
-							case RedditAPI.ACTION_UNVOTE:
-								mChangeDataManager.markUnvoted(now, src);
-								break;
+							// case RedditAPI.ACTION_UNVOTE:
+							// 	mChangeDataManager.markUnvoted(now, src);
+							// 	break;
 
 							case RedditAPI.ACTION_UPVOTE:
 								mChangeDataManager.markUpvoted(now, src);
+								break;
+
+							case RedditAPI.ACTION_UNUPVOTE:
+								mChangeDataManager.markUnUpvoted(now, src);
+								break;
+
+							case RedditAPI.ACTION_UNDOWNVOTE:
+								mChangeDataManager.markUnDownvoted(now, src);
 								break;
 
 							case RedditAPI.ACTION_SAVE:
@@ -1018,21 +1058,37 @@ public final class RedditPreparedPost {
 						final long now = RRTime.utcCurrentTimeMillis();
 
 						switch(action) {
-							case RedditAPI.ACTION_DOWNVOTE:
-							case RedditAPI.ACTION_UNVOTE:
-							case RedditAPI.ACTION_UPVOTE:
-								switch(lastVoteDirection) {
-									case -1:
-										mChangeDataManager.markDownvoted(now, src);
-										break;
+							// case RedditAPI.ACTION_DOWNVOTE:
+							// case RedditAPI.ACTION_UNVOTE:
+							// case RedditAPI.ACTION_UPVOTE:
+							// 	switch(lastVoteDirection) {
+							// 		case -1:
+							// 			mChangeDataManager.markDownvoted(now, src);
+							// 			break;
 
-									case 0:
-										mChangeDataManager.markUnvoted(now, src);
-										break;
-									case 1:
-										mChangeDataManager.markUpvoted(now, src);
-										break;
-								}
+							// 		case 0:
+							// 			mChangeDataManager.markUnvoted(now, src);
+							// 			break;
+							// 		case 1:
+							// 			mChangeDataManager.markUpvoted(now, src);
+							// 			break;
+							// 	}
+
+							case RedditAPI.ACTION_DOWNVOTE:
+								mChangeDataManager.markDownvoted(now, src);
+								break;
+
+							case RedditAPI.ACTION_UPVOTE:
+								mChangeDataManager.markUpvoted(now, src);
+								break;
+
+							case RedditAPI.ACTION_UNUPVOTE:
+								mChangeDataManager.markUnUpvoted(now, src);
+								break;
+
+							case RedditAPI.ACTION_UNDOWNVOTE:
+								mChangeDataManager.markUnDownvoted(now, src);
+								break;
 
 							case RedditAPI.ACTION_SAVE:
 								mChangeDataManager.markSaved(now, src, false);
@@ -1071,6 +1127,7 @@ public final class RedditPreparedPost {
 		return mChangeDataManager.isDownvoted(src);
 	}
 
+	// SAIDIT - Warning inaccurate
 	public int getVoteDirection() {
 		return isUpvoted() ? 1 : (isDownvoted() ? -1 : 0);
 	}
@@ -1183,11 +1240,11 @@ public final class RedditPreparedPost {
 
 						switch(action) {
 							case UPVOTE:
-								actionToTake = isUpvoted() ? Action.UNVOTE : Action.UPVOTE;
+								actionToTake = isUpvoted() ? Action.UNUPVOTE : Action.UPVOTE;
 								break;
 
 							case DOWNVOTE:
-								actionToTake = isDownvoted() ? Action.UNVOTE : Action.DOWNVOTE;
+								actionToTake = isDownvoted() ? Action.UNDOWNVOTE : Action.DOWNVOTE;
 								break;
 
 							case SAVE:
@@ -1210,10 +1267,16 @@ public final class RedditPreparedPost {
 
 				Action accessibilityAction = action;
 
-				if(accessibilityAction == Action.UPVOTE && isUpvoted()
-						|| accessibilityAction == Action.DOWNVOTE && isDownvoted())
+				// if(accessibilityAction == Action.UPVOTE && isUpvoted()
+				// 		|| accessibilityAction == Action.DOWNVOTE && isDownvoted())
+				// {
+				// 	accessibilityAction = Action.UNVOTE;
+				// }
+				if(accessibilityAction == Action.UPVOTE && isUpvoted())
 				{
-					accessibilityAction = Action.UNVOTE;
+					accessibilityAction = Action.UNUPVOTE;
+				} else if (accessibilityAction == Action.DOWNVOTE && isDownvoted()) {
+					accessibilityAction = Action.UNDOWNVOTE;
 				}
 
 				if(accessibilityAction == Action.SAVE && isSaved())

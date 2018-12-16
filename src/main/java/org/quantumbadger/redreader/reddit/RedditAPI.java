@@ -59,12 +59,14 @@ public final class RedditAPI {
 	public static final int ACTION_UNHIDE = 6;
 	public static final int ACTION_REPORT = 7;
 	public static final int ACTION_DELETE = 8;
+	public static final int ACTION_UNUPVOTE = 9;
+	public static final int ACTION_UNDOWNVOTE = 10;
 
 	public static final int SUBSCRIPTION_ACTION_SUBSCRIBE = 0;
 	public static final int SUBSCRIPTION_ACTION_UNSUBSCRIBE = 1;
 
 	@IntDef({ACTION_UPVOTE, ACTION_UNVOTE, ACTION_DOWNVOTE, ACTION_SAVE, ACTION_HIDE, ACTION_UNSAVE,
-		ACTION_UNHIDE, ACTION_REPORT, ACTION_DELETE})
+		ACTION_UNHIDE, ACTION_REPORT, ACTION_DELETE, ACTION_UNUPVOTE, ACTION_UNDOWNVOTE})
 	@Retention(RetentionPolicy.SOURCE)
 	public @interface RedditAction {}
 
@@ -363,12 +365,20 @@ public final class RedditAPI {
 				postFields.add(new PostField("dir", "-1"));
 				return Constants.Reddit.getUri(Constants.Reddit.PATH_VOTE);
 
-			case ACTION_UNVOTE:
-				postFields.add(new PostField("dir", "0"));
-				return Constants.Reddit.getUri(Constants.Reddit.PATH_VOTE);
+			// case ACTION_UNVOTE:
+			// 	postFields.add(new PostField("dir", "0"));
+			// 	return Constants.Reddit.getUri(Constants.Reddit.PATH_VOTE);
 
 			case ACTION_UPVOTE:
 				postFields.add(new PostField("dir", "1"));
+				return Constants.Reddit.getUri(Constants.Reddit.PATH_VOTE);
+
+			case ACTION_UNDOWNVOTE:
+				postFields.add(new PostField("dir", "-11"));
+				return Constants.Reddit.getUri(Constants.Reddit.PATH_VOTE);
+
+			case ACTION_UNUPVOTE:
+				postFields.add(new PostField("dir", "11"));
 				return Constants.Reddit.getUri(Constants.Reddit.PATH_VOTE);
 
 			case ACTION_SAVE: return Constants.Reddit.getUri(Constants.Reddit.PATH_SAVE);

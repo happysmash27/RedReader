@@ -136,14 +136,14 @@ public final class RedditPostView extends FlingableItemView implements RedditPre
 
 			case UPVOTE:
 				if(post.isUpvoted()) {
-					return new ActionDescriptionPair(RedditPreparedPost.Action.UNVOTE, R.string.action_vote_remove);
+					return new ActionDescriptionPair(RedditPreparedPost.Action.UNUPVOTE, R.string.action_upvote_remove);
 				} else {
 					return new ActionDescriptionPair(RedditPreparedPost.Action.UPVOTE, R.string.action_upvote);
 				}
 
 			case DOWNVOTE:
 				if(post.isDownvoted()) {
-					return new ActionDescriptionPair(RedditPreparedPost.Action.UNVOTE, R.string.action_vote_remove);
+					return new ActionDescriptionPair(RedditPreparedPost.Action.UNDOWNVOTE, R.string.action_downvote_remove);
 				} else {
 					return new ActionDescriptionPair(RedditPreparedPost.Action.DOWNVOTE, R.string.action_downvote);
 				}

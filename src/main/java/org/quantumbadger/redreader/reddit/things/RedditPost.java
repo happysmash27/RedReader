@@ -30,7 +30,7 @@ public final class RedditPost implements Parcelable, RedditThingWithIdAndType {
 	public int num_comments, score, ups, downs;
 	public boolean archived, over_18, hidden, saved, is_self, clicked, stickied;
 	public Object edited;
-	public Boolean likes;
+	public Boolean likes, dislikes;
 	public Boolean spoiler;
 
 	public long created, created_utc;
@@ -106,6 +106,12 @@ public final class RedditPost implements Parcelable, RedditThingWithIdAndType {
 			case 1: likes = true; break;
 		}
 
+		switch(in.readInt()) {
+			case -1: dislikes = false; break;
+			case 0: dislikes = null; break;
+			case 1: dislikes = true; break;
+		}
+
 		created = in.readLong();
 		created_utc = in.readLong();
 		selftext = in.readString();
@@ -165,6 +171,12 @@ public final class RedditPost implements Parcelable, RedditThingWithIdAndType {
 			parcel.writeInt(0);
 		} else {
 			parcel.writeInt(likes ? 1 : -1);
+		}
+
+		if(dislikes == null) {
+			parcel.writeInt(0);
+		} else {
+			parcel.writeInt(dislikes ? 1 : -1);
 		}
 
 		parcel.writeLong(created);

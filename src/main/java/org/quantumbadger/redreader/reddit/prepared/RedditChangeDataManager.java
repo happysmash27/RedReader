@@ -265,7 +265,7 @@ public final class RedditChangeDataManager {
 			return new Entry(
 					timestamp,
 					Boolean.TRUE.equals(comment.likes),
-					Boolean.FALSE.equals(comment.likes),
+					Boolean.TRUE.equals(comment.dislikes),
 					false,
 					Boolean.TRUE.equals(comment.saved),
 					mIsHidden); // Use existing value for "collapsed"
@@ -282,7 +282,7 @@ public final class RedditChangeDataManager {
 			return new Entry(
 					timestamp,
 					Boolean.TRUE.equals(post.likes),
-					Boolean.FALSE.equals(post.likes),
+					Boolean.TRUE.equals(post.dislikes),
 					post.clicked || mIsRead,
 					post.saved,
 					post.hidden ? true : null);
@@ -293,7 +293,7 @@ public final class RedditChangeDataManager {
 			return new Entry(
 					timestamp,
 					true,
-					false,
+					mIsDownvoted,
 					mIsRead,
 					mIsSaved,
 					mIsHidden);
@@ -303,18 +303,40 @@ public final class RedditChangeDataManager {
 
 			return new Entry(
 					timestamp,
-					false,
+					mIsUpvoted,
 					true,
 					mIsRead,
 					mIsSaved,
 					mIsHidden);
 		}
 
-		Entry markUnvoted(final long timestamp) {
+		// Entry markUnvoted(final long timestamp) {
+
+		// 	return new Entry(
+		// 			timestamp,
+		// 			false,
+		// 			false,
+		// 			mIsRead,
+		// 			mIsSaved,
+		// 			mIsHidden);
+		// }
+
+		Entry markUnUpvoted(final long timestamp) {
 
 			return new Entry(
 					timestamp,
 					false,
+					mIsDownvoted,
+					mIsRead,
+					mIsSaved,
+					mIsHidden);
+		}
+
+		Entry markUnDownvoted(final long timestamp) {
+
+			return new Entry(
+					timestamp,
+					mIsUpvoted,
 					false,
 					mIsRead,
 					mIsSaved,
@@ -475,11 +497,29 @@ public final class RedditChangeDataManager {
 		}
 	}
 
-	public void markUnvoted(final long timestamp, final RedditThingWithIdAndType thing) {
+	// public void markUnvoted(final long timestamp, final RedditThingWithIdAndType thing) {
+
+	// 	synchronized(mLock) {
+	// 		final Entry existingEntry = get(thing);
+	// 		final Entry updatedEntry = existingEntry.markUnvoted(timestamp);
+	// 		set(thing, existingEntry, updatedEntry);
+	// 	}
+	// }
+
+	public void markUnUpvoted(final long timestamp, final RedditThingWithIdAndType thing) {
 
 		synchronized(mLock) {
 			final Entry existingEntry = get(thing);
-			final Entry updatedEntry = existingEntry.markUnvoted(timestamp);
+			final Entry updatedEntry = existingEntry.markUnUpvoted(timestamp);
+			set(thing, existingEntry, updatedEntry);
+		}
+	}
+
+	public void markUnDownvoted(final long timestamp, final RedditThingWithIdAndType thing) {
+
+		synchronized(mLock) {
+			final Entry existingEntry = get(thing);
+			final Entry updatedEntry = existingEntry.markUnDownvoted(timestamp);
 			set(thing, existingEntry, updatedEntry);
 		}
 	}

@@ -33,7 +33,7 @@ public final class RedditComment implements Parcelable, RedditThingWithIdAndType
 
 	public String body, body_html, author, subreddit;
 	public String author_flair_text;
-	public Boolean archived, likes, score_hidden;
+	public Boolean archived, likes, dislikes, score_hidden;
 
 	public JsonValue replies;
 
@@ -67,6 +67,12 @@ public final class RedditComment implements Parcelable, RedditThingWithIdAndType
 			case -1: likes = false; break;
 			case 0: likes = null; break;
 			case 1: likes = true; break;
+		}
+
+		switch(in.readInt()) {
+			case -1: dislikes = false; break;
+			case 0: dislikes = null; break;
+			case 1: dislikes = true; break;
 		}
 
 		replies = null;
@@ -110,6 +116,12 @@ public final class RedditComment implements Parcelable, RedditThingWithIdAndType
 			parcel.writeInt(0);
 		} else {
 			parcel.writeInt(likes ? 1 : -1);
+		}
+
+		if(dislikes == null) {
+			parcel.writeInt(0);
+		} else {
+			parcel.writeInt(dislikes ? 1 : -1);
 		}
 
 		parcel.writeString(id);

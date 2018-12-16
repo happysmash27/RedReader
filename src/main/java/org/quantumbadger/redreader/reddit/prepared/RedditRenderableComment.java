@@ -60,13 +60,21 @@ public class RedditRenderableComment implements RedditRenderableInboxItem, Reddi
 
 		int score = rawComment.ups - rawComment.downs;
 
-		if(Boolean.TRUE.equals(rawComment.likes)) score--;
-		if(Boolean.FALSE.equals(rawComment.likes)) score++;
+		// if(Boolean.TRUE.equals(rawComment.likes)) score--;
+		// if(Boolean.FALSE.equals(rawComment.likes)) score++;
+		if(Boolean.TRUE.equals(rawComment.likes)) score = score - 2;
+		if(Boolean.TRUE.equals(rawComment.dislikes)) score--;
 
+		// if(changeDataManager.isUpvoted(mComment)) {
+		// 	score++;
+		// } else if(changeDataManager.isDownvoted(mComment)) {
+		// 	score--;
+		// }
 		if(changeDataManager.isUpvoted(mComment)) {
+			score = score + 2;
+		}
+		if(changeDataManager.isDownvoted(mComment)) {
 			score++;
-		} else if(changeDataManager.isDownvoted(mComment)) {
-			score--;
 		}
 
 		return score;
