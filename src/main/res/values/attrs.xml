@@ -85,5 +85,6 @@
     <attr name="rrIconLink" format="reference" />
     <attr name="rrIconTime" format="reference" />
     <attr name="rrIconForward" format="reference" />
+    <attr name="rrIconUpdownvote" format="reference" />
 
 </resources>

@@ -102,6 +102,7 @@
         <item name="rrIconLink">@drawable/ic_action_link_dark</item>
         <item name="rrIconTime">@drawable/ic_time_dark</item>
         <item name="rrIconForward">@drawable/ic_action_forward_dark</item>
+        <item name="rrIconUpdownvote">@drawable/action_updownvote_dark</item>
 
     </style>
 
@@ -333,6 +334,7 @@
         <item name="rrIconLink">@drawable/ic_action_link_light</item>
         <item name="rrIconTime">@drawable/ic_time_light</item>
         <item name="rrIconForward">@drawable/ic_action_forward_light</item>
+        <item name="rrIconUpdownvote">@drawable/action_updownvote_light</item>
 
     </style>
 

@@ -319,12 +319,14 @@ public final class RedditPostView extends FlingableItemView implements RedditPre
 		} else if(post.isHidden()) {
 			overlayIcon.setImageResource(R.drawable.ic_action_cross_dark);
 
-		} else if(post.isUpvoted()) {
+		} else if(post.isUpvoted() && !post.isDownvoted()) {
 			overlayIcon.setImageResource(R.drawable.action_upvote_dark);
 
-		} else if(post.isDownvoted()) {
+		} else if(post.isDownvoted() && !post.isUpvoted()) {
 			overlayIcon.setImageResource(R.drawable.action_downvote_dark);
 
+		} else if (post.isUpvoted() && post.isDownvoted()) {
+			overlayIcon.setImageResource(R.drawable.action_updownvote_dark);
 		} else {
 			overlayVisible = false;
 		}

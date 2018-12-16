@@ -124,6 +124,7 @@ public class MainMenuListingManager {
 		final Drawable rrIconCross;
 		final Drawable rrIconUpvote;
 		final Drawable rrIconDownvote;
+		final Drawable rrIconUpdownvote;
 
 		{
 			final TypedArray attr = context.obtainStyledAttributes(new int[]{
@@ -133,7 +134,8 @@ public class MainMenuListingManager {
 					R.attr.rrIconStarFilled,
 					R.attr.rrIconCross,
 					R.attr.rrIconUpvote,
-					R.attr.rrIconDownvote
+					R.attr.rrIconDownvote,
+					R.attr.rrIconUpdownvote
 			});
 
 			rrIconPerson = ContextCompat.getDrawable(context, attr.getResourceId(0, 0));
@@ -143,6 +145,7 @@ public class MainMenuListingManager {
 			rrIconCross = ContextCompat.getDrawable(context, attr.getResourceId(4, 0));
 			rrIconUpvote = ContextCompat.getDrawable(context, attr.getResourceId(5, 0));
 			rrIconDownvote = ContextCompat.getDrawable(context, attr.getResourceId(6, 0));
+			rrIconUpdownvote = ContextCompat.getDrawable(context, attr.getResourceId(7, 0));
 
 			attr.recycle();
 		}
