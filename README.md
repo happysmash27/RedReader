@@ -63,6 +63,16 @@ Gradle.
 Detailed instructions on building RedReader using IntelliJ IDEA are in
 [BUILD.md](BUILD.md).
 
+SaidIt Porting Guide
+----------------------
+
+Transition from org.quantumbadger.redreader to org.saiditnet.redreader:
+
+    $ cd RedReader
+    $ mv src/main/java/org/quantumbadger src/main/java/org/saiditnet
+    $ find ./src -type f -exec sed -i -e 's/org.quantumbadger./org.saiditnet./g' {} \;
+    $ find ./build.gradle -type f -exec sed -i -e 's/org\/quantumbadger/org\/saiditnet/g' {} \;
+
 
 SaidIt/Reddit Configuration
 ----------------------------

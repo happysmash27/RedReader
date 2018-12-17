@@ -1,7 +1,7 @@
-package org.quantumbadger.redreader.test.general;
+package org.saiditnet.redreader.test.general;
 
 import org.junit.Test;
-import org.quantumbadger.redreader.common.General;
+import org.saiditnet.redreader.common.General;
 
 import java.util.Locale;
 
