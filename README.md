@@ -27,21 +27,14 @@ Features
 Downloading
 -----------
 
-RedReader is available for free on the Google Play store:
+SaidIt (RedReader) is available for free on the Google Play store:
 
-https://play.google.com/store/apps/details?id=org.quantumbadger.redreader
+https://play.google.com/store/apps/details?id=org.saiditnet.redreader
 
 [<img src="https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png"
       alt="Get it on Google Play"
-      height="80">](https://play.google.com/store/apps/details?id=org.quantumbadger.redreader)
+      height="80">](https://play.google.com/store/apps/details?id=org.saiditnet.redreader)
 
-RedReader can also be found for free on F-Droid:
-
-https://f-droid.org/app/org.quantumbadger.redreader
-
-[<img src="https://f-droid.org/badge/get-it-on.png"
-      alt="Get it on F-Droid"
-      height="80">](https://f-droid.org/app/org.quantumbadger.redreader)
 
 Translating
 -----------
@@ -97,6 +90,7 @@ Thanks
 
 Thanks to:
 
+* QuantumBadger and RedReader contributors
 * tomorrowkey.jp, for the [GIF decoder](https://code.google.com/p/android-gifview/) (Apache License 2.0)
 * Apache, for various libraries
 * The [Jackson JSON processor](http://jackson.codehaus.org/)
