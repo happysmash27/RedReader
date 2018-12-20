@@ -1,4 +1,4 @@
-RedReader for SaidIt (for Android)
+SaidIt RedReader (for Android)
 =======================
 
 A [SaidIt](https://saidit.net) fork of RedReader, an unofficial open source client for reddit.
@@ -27,7 +27,7 @@ Features
 Downloading
 -----------
 
-SaidIt (RedReader) is available for free on the Google Play store:
+SaidIt RedReader is available for free on the Google Play store:
 
 https://play.google.com/store/apps/details?id=org.saiditnet.redreader
 
