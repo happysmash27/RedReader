@@ -50,7 +50,7 @@ public class PostCommentListingURL extends CommentListingURL {
 			final Integer limit,
 			final Sort order) {
 
-		if(postId != null && postId.startsWith("t3_")) {
+		if(postId != null && postId.startsWith("t5_")) {
 			postId = postId.substring(3);
 		}
 
