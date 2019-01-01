@@ -56,22 +56,21 @@ Gradle.
 Detailed instructions on building RedReader using IntelliJ IDEA are in
 [BUILD.md](BUILD.md).
 
-SaidIt Porting Guide
+SaidIt/reddit open source porting guide
 ----------------------
 
-Transition from org.quantumbadger.redreader to org.saiditnet.redreader:
+E.g. instead of org.quantumbadger.redreader use org.saiditnet.redreader:
 
+    $ git clone https://github.com/QuantumBadger/RedReader.git
     $ cd RedReader
     $ mv src/main/java/org/quantumbadger src/main/java/org/saiditnet
     $ find ./src -type f -exec sed -i -e 's/org.quantumbadger./org.saiditnet./g' {} \;
     $ find ./build.gradle -type f -exec sed -i -e 's/org\/quantumbadger/org\/saiditnet/g' {} \;
 
+Configuration:
 
-SaidIt/Reddit Configuration
-----------------------------
-
-* Create a new saidit/reddit user account for the app, employees cannot own the app
-* Create an 'installed app' which is read only with no secret key for anonymous users
+* Create a saidit/reddit open source user account for the app, admin/employee accounts cannot own the app
+* In preferences -> apps create an 'installed app' which is read only with no secret key for anonymous/guest app users
 * Set the app's `redirect url` to `http://rr_oauth_redir`
 * Set RedReader's `CLIENT_ID` to the saidit/reddit app id
 
