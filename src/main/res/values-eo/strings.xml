@@ -82,19 +82,19 @@
     <!-- Options Menu -->
 
     <string name="options_accounts">Kontoj</string>
-    <string name="options_accounts_long">Reddit-kontoj</string>
+    <string name="options_accounts_long">SaidIt-kontoj</string>
     <string name="options_theme">Etosoj</string>
     <string name="options_settings">Agordoj</string>
     <string name="options_submit_post">Afiŝi</string>
     <string name="options_refresh">Aktualigi</string>
-    <string name="options_refresh_subreddits">Aktualigi redditerojn</string>
+    <string name="options_refresh_subreddits">Aktualigi saiditerojn</string>
     <string name="options_refresh_posts">Aktualigi afiŝojn</string>
     <string name="options_refresh_comments">Aktualigi komentojn</string>
     <string name="options_past">Eksaj versioj</string>
     <string name="options_past_posts">Listo de eksversioj de afiŝoj</string>
     <string name="options_past_comments">Listo de eksversioj de komentoj</string>
     <string name="options_sort">Ordigi</string>
-    <string name="options_sort_subreddits">Ordigi redditerojn</string>
+    <string name="options_sort_subreddits">Ordigi saiditerojn</string>
     <string name="options_sort_posts">Ordigi afiŝojn</string>
 	
     <string name="options_sort_comments">Ordigi komentojn</string>
@@ -102,15 +102,15 @@
     <!-- Main Menu -->
 
     <string name="mainmenu_frontpage">Ĉefpaĝo</string>
-    <string name="mainmenu_all">Ĉiuj redditeroj</string>
-    <string name="mainmenu_custom">Alia redditero</string>
-    <string name="mainmenu_custom_invalid_name">Erara nomo de redditero.</string>
+    <string name="mainmenu_all">Ĉiuj saiditeroj</string>
+    <string name="mainmenu_custom">Alia saiditero</string>
+    <string name="mainmenu_custom_invalid_name">Erara nomo de saiditero.</string>
     <string name="mainmenu_saved">Konservitaj afiŝoj</string>
     <string name="mainmenu_hidden">Kaŝitaj afiŝoj</string>
     <string name="mainmenu_upvoted">Por-voĉdonitaj afiŝoj</string>
     <string name="mainmenu_inbox">Mesaĝujo</string>
     <string name="mainmenu_profile">Mia profilo</string>
-    <string name="mainmenu_header_subreddits">Redditeroj</string>
+    <string name="mainmenu_header_subreddits">Saiditeroj</string>
 
     <!-- General Listing -->
 
@@ -120,7 +120,7 @@
 
     <string name="accounts_anon">Anonimulo</string>
     <string name="accounts_active">Aktiva</string>
-    <string name="accounts_add">Aldoni Reddit-konton</string>
+    <string name="accounts_add">Aldoni SaidIt-konton</string>
     <string name="accounts_setactive">Aktivigi</string>
     <string name="accounts_reauth">Reaŭtentigi</string>
     <string name="accounts_delete">Forigi</string>
@@ -166,11 +166,11 @@
 
     <string name="action_menu_post_title">Agoj de afiŝo</string>
 
-    <string name="action_upvote">Voĉdoni por</string>
-    <string name="action_downvote">Voĉdoni kontraŭ</string>
+    <string name="action_upvote">Voĉdoni kiel akrasenta</string>
+    <string name="action_downvote">Voĉdoni kiel komika</string>
     <string name="action_vote_remove">Malvoĉdoni</string>
-    <string name="action_upvote_remove">Forigi voĉdonon por</string>
-    <string name="action_downvote_remove">Forigi voĉdonon kontraŭ</string>
+    <string name="action_upvote_remove">Forigi voĉdonon kiel akrasenta</string>
+    <string name="action_downvote_remove">Forigi voĉdonon kiel komika</string>
     <string name="action_save">Konservi</string>
     <string name="action_hide">Kaŝi</string>
     <string name="action_unsave">Malkonservi</string>
@@ -184,7 +184,7 @@
     <string name="action_share">Diskonigi</string>
     <string name="action_share_comments">Diskonigi komentojn</string>
     <string name="action_copy">Kopii</string>
-    <string name="action_gotosubreddit">Iri al redditero</string>
+    <string name="action_gotosubreddit">Iri al saiditero</string>
     <string name="action_reply">Respondi</string>
     <string name="action_edit">Redakti</string>
     <string name="action_user_profile">Profilo de uzanto</string>
@@ -229,7 +229,7 @@
     <string name="comment_reply_done">Respondo sendita. La komento aperos post aktualigo.</string>
     <string name="comment_edit_done">Komento redaktita. Ŝanĝoj aperos post aktualigo.</string>
     <string name="post_submit_title_hint">Titolo</string>
-    <string name="post_submit_subreddit_hint">Redditero</string>
+    <string name="post_submit_subreddit_hint">Saiditero</string>
     <string name="post_captcha_title">Captcha</string>
     <string name="post_captcha_submit_button">Afiŝi</string>
     <string name="post_submit_done">Afiŝo publikigita.</string>
@@ -244,10 +244,10 @@
     <!-- General errors -->
 
     <string name="error_403_title">Malĝusta uzanto</string>
-    <string name="error_403_message">Reddit diras, ke la nuna uzanto ne estas permesata por fari tion ĉi. Bonvolu provi elsaluti kaj poste reensaluti (per forigi la konton el la listo de kontoj, kaj poste aldoni ĝin denove).</string>
+    <string name="error_403_message">SaidIt diras, ke la nuna uzanto ne estas permesata por fari tion ĉi. Bonvolu provi elsaluti kaj poste reensaluti (per forigi la konton el la listo de kontoj, kaj poste aldoni ĝin denove).</string>
 	
-    <string name="error_subreddit_required_title">Redditero bezonata</string>
-    <string name="error_subreddit_required_message">Vi devas precizigi redditeron.</string>
+    <string name="error_subreddit_required_title">Saiditero bezonata</string>
+    <string name="error_subreddit_required_message">Vi devas precizigi saiditeron.</string>
 	
     <string name="error_bad_captcha_title">Malĝusta CAPTCHA</string>
     <string name="error_bad_captcha_message">Entajpita CAPTCHA-kodo estas malĝusta. Bonvolu reprovi.</string>
@@ -258,14 +258,14 @@
     <string name="error_unknown_api_title">Eraro</string>
     <string name="error_unknown_api_message">La servilo ne akceptis la peton pro nekonata eraro. Bonvolu reprovi.</string>
 	
-    <string name="error_redditdown_title">Reddit malfunkcias</string>
-    <string name="error_redditdown_message">Reddit estas nuntempe peze ŝarĝata. Bonvolu reprovi.</string>
+    <string name="error_redditdown_title">SaidIt malfunkcias</string>
+    <string name="error_redditdown_message">SaidIt estas nuntempe peze ŝarĝata. Bonvolu reprovi.</string>
 	
     <string name="error_cancelled_title">Operacio nuligita</string>
     <string name="error_cancelled_message">Lu nuna operacio estis nuligita.</string>
 	
     <string name="error_parse_title">Analiz-eraro</string>
-    <string name="error_parse_message">Reddit sendis iajn datumojn, kiujn mi ne povis kompreni.</string>
+    <string name="error_parse_message">SaidIt sendis iajn datumojn, kiujn mi ne povis kompreni.</string>
 	
     <string name="error_unexpected_cache_title">Senatenda kaŝmemormanka eraro</string>
     <string name="error_unexpected_cache_message">Okazis nekonata interna eraro rilata al kaŝmemoro.</string>
@@ -287,8 +287,8 @@
     <string name="error_postlist_cache_title">Fino de kaŝmemorigitaj datumoj</string>
     <string name="error_postlist_cache_message">Vi vidas eksan version de tiu ĉi enhavo, kaj neniuj pliaj afiŝoj de tiu ĉi seanco troviĝas en la kaŝmemoro. Bonvolu aktualigi por elŝuti pli novajn afiŝojn aŭ elekti alian eksan version per la menuo.</string>
 
-    <string name="error_postlist_redditdown_title">Reddit paneas</string>
-    <string name="error_postlist_redditdown_message">Reddit estas nuntempe peze ŝarĝata. Bonvolu aktualigi por elŝuti pli novajn afiŝojn aŭ elekti alian eksan version per la menuo.</string>
+    <string name="error_postlist_redditdown_title">SaidIt paneas</string>
+    <string name="error_postlist_redditdown_message">SaidIt estas nuntempe peze ŝarĝata. Bonvolu aktualigi por elŝuti pli novajn afiŝojn aŭ elekti alian eksan version per la menuo.</string>
 
     <!-- Session List -->
 
@@ -304,7 +304,7 @@
     <string name="userprofile_hasmail">Havas retpoŝton</string>
     <string name="userprofile_hasmodmail">Havas retpoŝton de kontrolanto</string>
     <string name="userprofile_isfriend">Estas amiko</string>
-    <string name="userprofile_isgold">Reddit Gold</string>
+    <string name="userprofile_isgold">SaidIt Gold</string>
     <string name="userprofile_moderator">Estas kontrolanto</string>
     <string name="userprofile_viewcomments">Montri komentojn</string>
     <string name="userprofile_viewposts">Montri afiŝojn</string>
@@ -321,7 +321,7 @@
     <string name="props_created">Kreita je</string>
     <string name="props_edited">Redaktita je</string>
     <string name="props_score">Poento(j)</string>
-    <string name="props_subreddit">Redditero</string>
+    <string name="props_subreddit">Saiditero</string>
     <string name="props_url">URL</string>
     <string name="props_num_comments">Nombro da komentoj</string>
     <string name="props_body_markdown">Tekst-korpo (kruda Markdown)</string>
@@ -335,7 +335,7 @@
 
     <string name="notification_comment">%s respondis al vi</string>
     <string name="notification_message">%s sendis al vi mesaĝon</string>
-    <string name="notification_message_multiple">Novaj redditaj mesaĝoj</string>
+    <string name="notification_message_multiple">Novaj saiditaj mesaĝoj</string>
     <string name="notification_message_action">Frapetu por vidigi</string>
 
     <!-- General -->
@@ -384,7 +384,7 @@
     <string name="error_invalid_password_message">Via uzantnomo aŭ pasvorto estas erara.</string>
 
     <string name="error_ratelimit_title">Tro multe da misprovoj.</string>
-    <string name="error_ratelimit_message">Blokita pro tro multe da eraraj ensalut-provoj el tiu ĉi IP-adreso. Reddit diras:</string>
+    <string name="error_ratelimit_message">Blokita pro tro multe da eraraj ensalut-provoj el tiu ĉi IP-adreso. SaidIt diras:</string>
 
     <string name="general_success">Sukceso</string>
 
@@ -395,7 +395,7 @@
     <string name="error_toast_no_urls_in_self">Neniu URL trovita en tiu ĉi memafiŝo.</string>
     <string name="error_toast_parent_post_not_downloaded">Superafiŝo ne estas ankoraŭ elŝutita.</string>
 
-    <string name="download_subreddits">Elŝutado de redditeroj…</string>
+    <string name="download_subreddits">Elŝutado de saiditeroj…</string>
 
     <string name="subtitle_points">poento(j)</string>
     <string name="subtitle_by">de</string>
@@ -507,7 +507,7 @@
 
     <!-- 2014-04-21 -->
 
-    <string name="invalid_subreddit_name">Malĝusta nomo de redditero</string>
+    <string name="invalid_subreddit_name">Malĝusta nomo de saiditero</string>
 
     <!-- 2014-04-26 -->
 
@@ -516,7 +516,7 @@
 
     <!-- 2014-09-21 -->
     <string name="gold">Gold</string>
-    <string name="pref_appearance_comment_header_items_gold">Reddit Gold</string>
+    <string name="pref_appearance_comment_header_items_gold">SaidIt Gold</string>
 
     <!-- 2014-11-15 -->
     <string name="karma_link">Ligila karmo</string>
@@ -554,7 +554,7 @@
     <string name="error_title_login_user_denied_permission">Permeso rifuzita</string>
     <string name="error_message_login_user_denied_permission">Permeso por aliri la konton estis rifuzita. Bonvolu reprovi.</string>
 
-    <string name="error_title_login_unknown_reddit_error">Nekonata reddita eraro: %s</string>
+    <string name="error_title_login_unknown_reddit_error">Nekonata saidita eraro: %s</string>
 
     <!-- 2015-05-23 -->
     <string name="imageview_invalid_video">Malĝusta filmeto. Provos internan spektilon.</string>
@@ -610,7 +610,7 @@
     <string name="album_already_first_image">Jam sur unua album-paĝo.</string>
     <string name="album_already_last_image">Jam sur lasta album-paĝo.</string>
 
-    <string name="upgrade_v190_login_message">RedReader estas ĝisdatigita kaj nun uzas oAuth-n por aŭtentigi en Reddit. Se vi estis ensalutinta antaŭ la ĝisdatigo, vi estas nun elsalutinta.</string>
+    <string name="upgrade_v190_login_message">RedReader estas ĝisdatigita kaj nun uzas oAuth-n por aŭtentigi en SaidIt. Se vi estis ensalutinta antaŭ la ĝisdatigo, vi estas nun elsalutinta.</string>
 
     <string name="pref_behaviour_videoview_mode_title">Film-spektilo</string>
     <string name="pref_behaviour_videoview_mode_internal_videoview">Interna VideoView (konsilinda)</string>
@@ -633,8 +633,8 @@
     <string name="pref_cache_precache_comments_title">Antaŭŝargi komentojn</string>
     <string name="pref_cache_precache_comments_wifionly_title">Nur per vifio</string>
 
-    <string name="mainmenu_header_subreddits_subscribed">Abonataj redditeroj</string>
-    <string name="mainmenu_header_subreddits_pinned">Alpinglitaj redditeroj</string>
+    <string name="mainmenu_header_subreddits_subscribed">Abonataj saiditeroj</string>
+    <string name="mainmenu_header_subreddits_pinned">Alpinglitaj saiditeroj</string>
 
     <string name="pin_subreddit">Alpingli al ĉefmenuo</string>
     <string name="unpin_subreddit">Depingli el ĉefmenuo</string>
@@ -646,13 +646,13 @@
 
     <!-- 2015-12-06 -->
     <string name="error_too_fast_title">Tro rapide</string>
-    <string name="error_too_fast_message">Reddit diras, ke vi afiŝas tro rapide. Bonvolu atendi kelkaj minutoj antaŭ reprovi.</string>
+    <string name="error_too_fast_message">SaidIt diras, ke vi afiŝas tro rapide. Bonvolu atendi kelkaj minutoj antaŭ reprovi.</string>
 
     <!-- 2015-12-19 -->
-    <string name="block_subreddit">Bloki redditeron</string>
-    <string name="unblock_subreddit">Malbloki redditeron</string>
-    <string name="block_done">Redditero blokita. Estontaj vizitoj al /r/all esceptos tiun ĉi redditeron.</string>
-    <string name="unblock_done">Redditero malblokita. Estontaj vizitoj al /r/all inkludos tiun ĉi redditeron.</string>
+    <string name="block_subreddit">Bloki saiditeron</string>
+    <string name="unblock_subreddit">Malbloki saiditeron</string>
+    <string name="block_done">Saiditero blokita. Estontaj vizitoj al /s/all esceptos tiun ĉi saiditeron.</string>
+    <string name="unblock_done">Saiditero malblokita. Estontaj vizitoj al /s/all inkludos tiun ĉi saiditeron.</string>
 
     <!-- 2016-03-14-->
     <string name="pref_behaviour_comments_header">Komentoj</string>
@@ -662,7 +662,7 @@
 
     <!-- 2016-04-02 -->
     <string name="open_with">Malfermi per</string>
-    <string name="pref_network_tor_title">Uzi Tor</string>
+    <string name="pref_network_tor_title">Uzi Tor (eksperimenta)</string>
 
     <!-- 2016-04-03 -->
     <string name="error_tor_not_installed">Tor ne funkcios antaŭ Orbot estos instalita. Ĉu instali ĝin nun?</string>
@@ -689,7 +689,7 @@
     <string name="image_selected_summary">Bildo elektita: %1$dx%2$d, %3$s</string>
 
 	<!-- 2016-06-10 -->
-	<string name="submit_post_specify_subreddit">Precizigi redditeron</string>
+	<string name="submit_post_specify_subreddit">Precizigi saiditeron</string>
 	<string name="submit_post_title_empty">Titolo ne povas esti malplena</string>
 	<string name="submit_post_url_empty">URL ne povas esti malplena</string>
 	<string name="submit_post_self_text_hint">Memafiŝo</string>
@@ -727,7 +727,7 @@
 	<string name="userprofile_pm">Sendi mesaĝon</string>
 
 	<string name="error_too_long_title">Tro longa</string>
-	<string name="error_too_long_message">Reddit diras, ke la entajpita teksto estas tro longa.</string>
+	<string name="error_too_long_message">SaidIt diras, ke la entajpita teksto estas tro longa.</string>
 
 	<string name="pm_send_actionbar">Sendi mesaĝon</string>
 	<string name="submit_post_actionbar">Publikigi afiŝon</string>
@@ -762,11 +762,11 @@
 
 	<!-- 2016-08-06 -->
 	<string name="mainmenu_custom_destination">Propra loko</string>
-	<string name="mainmenu_custom_destination_subreddit">Redditero</string>
+	<string name="mainmenu_custom_destination_subreddit">Saiditero</string>
 	<string name="mainmenu_custom_destination_user">Uzanto</string>
 	<string name="mainmenu_custom_destination_url">URL</string>
 
-	<string name="mainmenu_header_multireddits">Plurredditeroj</string>
+	<string name="mainmenu_header_multireddits">Plursaiditeroj</string>
 
 	<string name="pref_behaviour_share_permalink_title">Diskonigi kiel konstantan ligilon</string>
 
@@ -779,7 +779,7 @@
 	<string name="error_cache_dir_does_not_exist_message">La kaŝmemora dosierujo ne povas esti atingita. Bonvolu elekti alian lokon en agordoj de kaŝmemoro.</string>
 
 	<!-- 2016-08-15 -->
-	<string name="pref_behaviour_pinned_subredditsort">Ordigo de alpinglitaj redditeroj</string>
+	<string name="pref_behaviour_pinned_subredditsort">Ordigo de alpinglitaj saiditeroj</string>
 	<string name="sort_pinned_subreddit_name">Laŭ nomo</string>
 	<string name="sort_pinned_subreddit_date">Laŭ dato de aldono</string>
 
@@ -798,13 +798,13 @@
 	<string name="pref_behaviour_enable_swipe_refresh_title">Ŝovumu malsupren por aktualigi</string>
 
 	<!-- 2016-09-10 -->
-	<string name="mainmenu_header_subreddits_blocked">Blokitaj redditeroj</string>
-	<string name="pref_behaviour_blocked_subredditsort">Ordigo de blokitaj redditeroj</string>
+	<string name="mainmenu_header_subreddits_blocked">Blokitaj saiditeroj</string>
+	<string name="pref_behaviour_blocked_subredditsort">Ordigo de blokitaj saiditeroj</string>
 	<string name="sort_blocked_subreddit_name">Laŭ nomo</string>
 	<string name="sort_blocked_subreddit_date">Laŭ dato de bloko</string>
 
 	<!-- 2016-09-21 -->
-	<string name="pref_appearance_show_blocked_subreddits_main_menu_title">Montri blokitajn redditerojn en ĉefmenuo</string>
+	<string name="pref_appearance_show_blocked_subreddits_main_menu_title">Montri blokitajn saiditerojn en ĉefmenuo</string>
 
 	<!-- 2016-10-02 -->
 	<string name="pref_cache_rerequest_postlist_age_title">Aktualigi afiŝojn se kaŝmemoro pli malnova ol</string>
@@ -834,7 +834,7 @@
 	<string name="pm_reply_done">Respondo sendita.</string>
 
 	<!-- 2017-02-15 -->
-	<string name="mainmenu_popular">Popularaj redditeroj</string>
+	<string name="mainmenu_popular">Popularaj saiditeroj</string>
 
 	<!-- 2017-02-23 -->
 	<string name="action_back">Reen</string>
@@ -842,23 +842,23 @@
 	<!-- 2017-03-02 -->
 	<string name="pref_menus_link_context_items_title">Elementoj de ligila kuntekst-menuo</string>
 	<!-- 2017-03-07 -->
-	<string name="pref_menus_subreddit_context_items_title">Elementoj de redditera kuntekst-menuo</string>
-	<string name="mainmenu_toast_not_subscribed">Vi ankoraŭ ne abonas tiun ĉi redditeron!</string>
-	<string name="mainmenu_toast_subscribed">Vi jam abonas tiun ĉi redditero!</string>
-	<string name="mainmenu_toast_not_pinned">Tiu ĉi redditero ne estas alpinglita al la ĉefmenuo!</string>
-	<string name="mainmenu_toast_pinned">Tiu ĉi redditero estas jam alpinglita al la ĉefmenuo!</string>
-	<string name="mainmenu_toast_not_blocked">Tiu ĉi redditero ne estas blokita!</string>
-	<string name="mainmenu_toast_blocked">Tiu ĉi redditero estas jam blokita!</string>
+	<string name="pref_menus_subreddit_context_items_title">Elementoj de saiditera kuntekst-menuo</string>
+	<string name="mainmenu_toast_not_subscribed">Vi ankoraŭ ne abonas tiun ĉi saiditeron!</string>
+	<string name="mainmenu_toast_subscribed">Vi jam abonas tiun ĉi saiditero!</string>
+	<string name="mainmenu_toast_not_pinned">Tiu ĉi saiditero ne estas alpinglita al la ĉefmenuo!</string>
+	<string name="mainmenu_toast_pinned">Tiu ĉi saiditero estas jam alpinglita al la ĉefmenuo!</string>
+	<string name="mainmenu_toast_not_blocked">Tiu ĉi saiditero ne estas blokita!</string>
+	<string name="mainmenu_toast_blocked">Tiu ĉi saiditero estas jam blokita!</string>
 	
 	<!-- 2017-04-02 -->
 	<string name="edit_post_actionbar">Redakti afiŝon</string>
 	<string name="post_edit_done">Afiŝo redaktita. Ŝanĝoj aperos post aktualigo.</string>
-	<string name="action_block_subreddit">Bloki redditeron</string>
-	<string name="action_unblock_subreddit">Malbloki redditeron</string>
-	<string name="action_pin_subreddit">Alpingli redditeron al ĉefmenuo</string>
-	<string name="action_unpin_subreddit">Depingli redditeron el ĉefmenuo</string>
-	<string name="action_subscribe_subreddit">Aboni redditeron</string>
-	<string name="action_unsubscribe_subreddit">Malaboni redditeron</string>	
+	<string name="action_block_subreddit">Bloki saiditeron</string>
+	<string name="action_unblock_subreddit">Malbloki saiditeron</string>
+	<string name="action_pin_subreddit">Alpingli saiditeron al ĉefmenuo</string>
+	<string name="action_unpin_subreddit">Depingli saiditeron el ĉefmenuo</string>
+	<string name="action_subscribe_subreddit">Aboni saiditeron</string>
+	<string name="action_unsubscribe_subreddit">Malaboni saiditeron</string>	
 	
 	<!-- 2017-04-14 -->
 	<string name="collapsed_self_post">Memafiŝo maletendita</string>
@@ -873,7 +873,7 @@
 	<string name="pref_behaviour_self_post_tap_actions_title">Ago je frapeti memafiŝon</string>
 	
 	<!-- 2017-06-05 -->
-	<string name="pref_menus_show_popular_main_menu_title">Montri /r/popular en ĉefmenuo</string>
+	<string name="pref_menus_show_popular_main_menu_title">Montri /s/popular en ĉefmenuo</string>
 	<string name="pref_behaviour_video_playback_controls_title">Aktivigi filmet-ludadajn stirilojn</string>
 	<string name="error_no_suitable_apps_available">Neniuj taŭgaj aplikaĵoj disponeblaj.</string>
 <string name="pref_appearance_comments_show_floating_toolbar_title">Montri glitan ilobreton supre de komentoj</string>
@@ -881,7 +881,7 @@
 
 	<string name="disable_replies_to_infobox_failed">Malsukcesis malaktivigi respondon al mesaĝujo</string>
 
-	<string name="mainmenu_random">Hazarda redditero</string>
-	<string name="pref_menus_show_random_main_menu_title">Montri /r/random en la ĉefmenuo</string>
+	<string name="mainmenu_random">Hazarda saiditero</string>
+	<string name="pref_menus_show_random_main_menu_title">Montri /s/random en la ĉefmenuo</string>
 
 </resources>
